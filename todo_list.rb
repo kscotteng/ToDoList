@@ -1,5 +1,6 @@
 # Simple To Do List
-# ToDoList Class
+# require access to todo_item.rb file
+require "./todo_items.rb"
 
 class ToDoList
   attr_reader :name, :todo_items
@@ -10,3 +11,12 @@ class ToDoList
   end
 
 end
+
+# instantiating ToDoList class by:
+#     adding "Groceries" to todo_list, and
+#     adding "Milk" to todo_item
+todo_list = ToDoList.new("Groceries")
+todo_item = ToDoItem.new("Milk")
+
+puts todo_list.inspect
+puts todo_list.inspect
