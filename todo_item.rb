@@ -24,4 +24,14 @@ class ToDoItem
     @complete
   end
 
+  # create a method to convert @complete to a string (for output purposes)
+  # [C] = complete, [I] = Incomplete
+  def to_s
+    if complete?
+      "[C] #{name}"
+    else
+      "[I] #{name}"
+    end
+  end
+  
 end
