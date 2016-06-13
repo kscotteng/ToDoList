@@ -19,4 +19,9 @@ class ToDoItem
     @complete = false
   end
 
+  # create a method to determine if ToDoItem in complete or incomplete
+  def complete?
+    @complete
+  end
+
 end
