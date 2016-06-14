@@ -17,6 +17,17 @@ class ToDoList
 
   # create a method that allows us to remove an item from the ToDoList
   def remove_item(name)
+      if index = find_index(name)
+      # if a match is found, the item at that index location will be removed
+        todo_items.delete_at(index)
+        return true
+        else
+        # if no match is found, false will be returned to found
+        return false
+      end
+  end
+
+  def find_index (name)
     # set an index variable at the 0th position for looping through the array
     index = 0
     # set a flag to determine whether or not we found a todo_item - starts off as false
@@ -30,29 +41,6 @@ class ToDoList
       if found
         break
         # if a match was not found, move to next index position in array and loop again
-        else
-          index += 1
-      end
-    end
-      # if a match is found, the item at that index location will be removed
-      if found
-        todo_items.delete_at(index)
-        return true
-        else
-        # if no match is found, false will be returned to found
-        return false
-      end
-  end
-
-  def find_index (name)
-    index = 0
-    found = false
-    todo_items.each do |todo_item|
-      if todo_item.name == name
-        found = true
-      end
-      if oufnd
-        break
       else
         index += 1
       end
