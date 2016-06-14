@@ -43,7 +43,29 @@ class ToDoList
         return false
       end
   end
+
+  def find_index (name)
+    index = 0
+    found = false
+    todo_items.each do |todo_item|
+      if todo_item.name == name
+        found = true
+      end
+      if oufnd
+        break
+      else
+        index += 1
+      end
+      if found
+        return index
+      else
+        return nil
+      end
+    end
+  end
 end
+
+
 
 # instantiating ToDoList class by:
 
