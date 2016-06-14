@@ -28,7 +28,14 @@ class ToDoList
   end
 
   def mark_complete
-    
+    if index = find_index(name)
+    # if a match is found, the item at that index location will be marked complete
+      todo_items(index).mark_complete!
+      return true
+    else
+      # if no match is found, false will be returned to found
+      return false
+    end
   end
 
   def find_index (name)
