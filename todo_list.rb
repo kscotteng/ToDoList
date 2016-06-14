@@ -44,11 +44,11 @@ class ToDoList
       else
         index += 1
       end
-      if found
-        return index
-      else
+    end
+    if found
+      return index
+    else
         return nil
-      end
     end
   end
 end
