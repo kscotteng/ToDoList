@@ -27,6 +27,10 @@ class ToDoList
       end
   end
 
+  def mark_complete
+    
+  end
+
   def find_index (name)
     # set an index variable at the 0th position for looping through the array
     index = 0
