@@ -27,10 +27,10 @@ class ToDoList
       end
   end
 
-  def mark_complete
+  def mark_complete(name)
     if index = find_index(name)
     # if a match is found, the item at that index location will be marked complete
-      todo_items(index).mark_complete!
+      todo_items[index].mark_complete!
       return true
     else
       # if no match is found, false will be returned to found
@@ -38,7 +38,7 @@ class ToDoList
     end
   end
 
-  def find_index (name)
+  def find_index(name)
     # set an index variable at the 0th position for looping through the array
     index = 0
     # set a flag to determine whether or not we found a todo_item - starts off as false
@@ -68,7 +68,7 @@ end
 
 # instantiating ToDoList class by:
 
-# todo_list = ToDoList.new("Groceries")
+todo_list = ToDoList.new("Groceries")
 todo_list.add_item("Milk")
 todo_list.add_item("Eggs")
 todo_list.add_item("Bread")
@@ -81,6 +81,7 @@ end
 
 if todo_list.mark_complete("Milk")
   puts "Milk was marked complete."
+end
 
 puts ""
 puts todo_list.inspect
