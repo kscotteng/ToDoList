@@ -62,6 +62,16 @@ class ToDoList
         return nil
     end
   end
+
+  def print_list
+    puts "#{name} list"
+    puts "-" * 30
+    todo_items.each do |todo_item|
+      puts todo_item
+    end
+    puts "\n"
+  end
+
 end
 
 
