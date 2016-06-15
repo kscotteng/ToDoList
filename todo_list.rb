@@ -68,14 +68,19 @@ end
 
 # instantiating ToDoList class by:
 
-todo_list = ToDoList.new("Groceries")
+# todo_list = ToDoList.new("Groceries")
 todo_list.add_item("Milk")
 todo_list.add_item("Eggs")
-system "clear"
-puts todo_list.inspect
+todo_list.add_item("Bread")
+# system "clear"
+# puts todo_list.inspect
 puts ""
 if todo_list.remove_item("Eggs")
   puts "Eggs were removed from the list."
 end
+
+if todo_list.mark_complete("Milk")
+  puts "Milk was marked complete."
+
 puts ""
 puts todo_list.inspect
