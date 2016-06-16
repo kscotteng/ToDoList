@@ -63,11 +63,16 @@ class ToDoList
     end
   end
 
-  def print_list
-    puts "#{name} list"
+  def print_list(kind = "all")
+    puts "#{name} list - #{kind} items"
     puts "-" * 30
     todo_items.each do |todo_item|
-      puts todo_item
+      case kind
+      when "all"
+        puts todo_item
+      when "complete"
+        puts todo_item if todo_item.complete?
+      end
     end
     puts "\n"
   end
@@ -96,3 +101,4 @@ end
 
 puts ""
 puts todo_list.print_list
+puts todo_list.print_list("complete")
