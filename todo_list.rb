@@ -72,6 +72,8 @@ class ToDoList
         puts todo_item
       when "complete"
         puts todo_item if todo_item.complete?
+      when "incomplete"
+        puts todo_item unless todo_item.complete?
       end
     end
     puts "\n"
@@ -102,3 +104,4 @@ end
 puts ""
 puts todo_list.print_list
 puts todo_list.print_list("complete")
+puts todo_list.print_list("incomplete")
