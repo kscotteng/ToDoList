@@ -82,6 +82,7 @@ todo_list = ToDoList.new("Groceries")
 todo_list.add_item("Milk")
 todo_list.add_item("Eggs")
 todo_list.add_item("Bread")
+todo_list.add_item("Butter")
 # system "clear"
 # puts todo_list.inspect
 puts ""
@@ -94,4 +95,4 @@ if todo_list.mark_complete("Milk")
 end
 
 puts ""
-puts todo_list.inspect
+puts todo_list.print_list
